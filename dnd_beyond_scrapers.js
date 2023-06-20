@@ -9,6 +9,7 @@
 // @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/GlobalData.js
 // @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/Scraper.js
 // @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/UIPanel.js
+// @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/SpellBook.js
 // @match        https://www.dndbeyond.com/characters/*
 // @run-at       document-end
 // @grant        GM_getResourceText
