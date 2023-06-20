@@ -3,12 +3,17 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.2
 // @description  try to take over the world!
-// @author       You
+// @author       ideans
 // @updateURL    https://github.com/Fryymann/browser_scripts/blob/master/dnd_beyond_scrapers.js
 // @downloadURL  https://github.com/Fryymann/browser_scripts/blob/master/dnd_beyond_scrapers.js
 // @match        https://www.dndbeyond.com/characters/*
+// @run-at       document-end
+// @grant        GM_getResourceText
+// @grant        GM_addStyle
+// @grant        GM_xmlhttpRequest
+// @grant        GM_getResourceURL
+// @grant        GM_xmlhttpRequest
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @grant        none
 // ==/UserScript==
 
 console.log( "\x1b[31mDnD Beyond Scraper Loaded\x1b[0m" )
