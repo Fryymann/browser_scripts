@@ -4,8 +4,8 @@
 // @version      0.2
 // @description  try to take over the world!
 // @author       ideans
-// @updateURL    https://github.com/Fryymann/browser_scripts/blob/master/dnd_beyond_scrapers.js
-// @downloadURL  https://github.com/Fryymann/browser_scripts/blob/master/dnd_beyond_scrapers.js
+// @updateURL    https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
+// @downloadURL  https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
 // @match        https://www.dndbeyond.com/characters/*
 // @run-at       document-end
 // @grant        GM_getResourceText
