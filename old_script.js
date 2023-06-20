@@ -10,11 +10,7 @@
 // ==/UserScript==
 
 console.log( "\x1b[31mDnD Beyond Scraper Loaded\x1b[0m" )
-const STYLES = {
-    fontColor: "#FFF",
-    backgroundColor: "rgba(0,0,0,0.75)",
 
-}
 const GD = {
     cssClasses: {
         abilities: {

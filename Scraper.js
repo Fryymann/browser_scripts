@@ -11,11 +11,11 @@ class Scraper {
         this.proficiencies = this.proficiencies.bind( this )
         this.combatStats = this.combatStats.bind( this )
         this.spells = this.spells.bind( this )
-        this.log = this.log.bind(this)
+        this.log = this.log.bind( this )
     }
 
     loadLogger( loggerFn ) {
-        this.log = loggerFn.bind(this)
+        this.log = loggerFn.bind( this )
     }
 
     log() {
@@ -33,6 +33,7 @@ class Scraper {
     basicInfo() {
         this.log( 'basicInfo' )
         const cssClasses = this.cssClasses.basicInfo
+        console.log( cssClasses )
         const container = document.getElementsByClassName( cssClasses.container )[ 0 ]
 
         const data = {
@@ -81,7 +82,7 @@ class Scraper {
             const savingThrowData = {
                 ability: current.getElementsByClassName( cssClasses.name )[ 0 ].children[ 0 ].innerText,
                 prof: current.getElementsByClassName( cssClasses.prof )[ 0 ].children[ 0 ].ariaLabel === "Proficient",
-                mod: Scrape.modifier( current ),
+                mod: this.modifier( current ),
             }
 
             data.push( savingThrowData )
@@ -103,7 +104,7 @@ class Scraper {
                 name: current.getElementsByClassName( cssClasses.name )[ 0 ].innerHTML,
                 ability: current.getElementsByClassName( cssClasses.ability )[ 0 ].innerHTML,
                 prof: current.getElementsByClassName( cssClasses.proficient )[ 0 ].children[ 0 ].ariaLabel === "Proficient",
-                mod: Scrape.modifier( current ),
+                mod: this.modifier( current ),
             }
             data.push( skillData )
         }
@@ -161,8 +162,8 @@ class Scraper {
         const cssClasses = this.cssClasses.combat
 
         const data = {
-            profBonus: Scrape.modifier( document.getElementsByClassName( cssClasses.profBonus.container )[ 0 ] ),
-            initiative: Scrape.modifier( document.getElementsByClassName( cssClasses.initiative.container )[ 0 ] ),
+            profBonus: this.modifier( document.getElementsByClassName( cssClasses.profBonus.container )[ 0 ] ),
+            initiative: this.modifier( document.getElementsByClassName( cssClasses.initiative.container )[ 0 ] ),
             speed: document.getElementsByClassName( cssClasses.speed.value )[ 0 ].innerHTML,
             AC: document.getElementsByClassName( cssClasses.armor.value )[ 0 ].innerHTML,
         }
