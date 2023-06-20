@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         DnD Beyond Scraper
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  try to take over the world!
-// @author       ideans
+// @author       ideans, kmarquez
 // @updateURL    https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
 // @downloadURL  https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
 // @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/GlobalData.js
