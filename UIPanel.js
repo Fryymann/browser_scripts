@@ -3,17 +3,21 @@
 class UIPanel {
     constructor( node = document.body ) {
         this.parentNode = node
-        this.hidden = true
+        this.hidden = false
         this.create = this.create.bind( this )
         this.createHeader = this.createHeader.bind( this )
         this.createContentBox = this.createContentBox.bind( this )
         this.append = this.append.bind( this )
         this.attachListeners = this.attachListeners.bind( this )
+        this.hide = this.hide.bind(this)
+        this.show = this.show.bind(this)
+        this.toggle = this.toggle.bind(this)
 
         this.panel = this.create()
         this.header = this.createHeader()
         this.contentBox = this.createContentBox()
         this.append()
+        this.toggle()
     }
 
     hide() {
