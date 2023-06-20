@@ -1,0 +1,6 @@
+
+class SpellBook {
+    constructor() {
+
+    }
+}
