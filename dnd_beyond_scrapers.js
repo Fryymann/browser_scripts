@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         DnD Beyond Scraper
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
+// @updateURL    https://github.com/Fryymann/browser_scripts/blob/master/dnd_beyond_scrapers.js
+// @downloadURL  https://github.com/Fryymann/browser_scripts/blob/master/dnd_beyond_scrapers.js
 // @match        https://www.dndbeyond.com/characters/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
@@ -485,25 +487,31 @@ function keydownHandler( event ) {
             const characterData = getData()
             printData( characterData )
 
-        }
-        else if ( event.key === "{" ) {
+        } else if ( event.key === "{" ) {
             // Stringified Version
             const characterData = getData()
             const characterDataString = JSON.stringify( characterData )
             printData( characterDataString )
 
-        }
-        else if ( event.key === '"' ) {
+        } else if ( event.key === '"' ) {
             // Stringified Version
             const characterData = getData()
             const characterDataString = JSON.stringify( characterData, null, "\t" )
             printData( "Data Saved" )
             localStorage.setItem( characterData.basicInfo.name, characterDataString )
-        }
-        else if ( event.key === ':' ) {
+        } else if ( event.key === ':' ) {
             // Spellbook
             copySpellBook()
         }
+        // else if ( event.key === "?" ) {
+        //     // Panel
+        //     if ( panel.style.display === "none" ) {
+        //         panel.style.display = "block"
+
+        //     } else {
+        //         panel.style.display = "none"
+        //     }
+        // }
         else if ( event.key === '>' ) {
             if ( GD.logEnabled === true ) {
                 GD.logEnabled = false
