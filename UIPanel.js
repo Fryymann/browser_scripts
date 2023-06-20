@@ -93,11 +93,11 @@ class UIPanel {
     }
 
     attachListeners() {
-        const panel = this.panel
+        const toggle = this.toggle
         document.addEventListener( "keydown", function ( event ) {
             if ( event.ctrlKey && event.shiftKey ) {
                 if ( event.key === "?" ) {
-                    this.toggle()
+                    toggle()
                 }
             }
         } )
