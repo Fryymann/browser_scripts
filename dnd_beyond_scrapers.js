@@ -6,6 +6,9 @@
 // @author       ideans
 // @updateURL    https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
 // @downloadURL  https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
+// @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/GlobalData.js
+// @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/Scraper.js
+// @require      https://raw.githubusercontent.com/Fryymann/browser_scripts/master/UIPanel.js
 // @match        https://www.dndbeyond.com/characters/*
 // @run-at       document-end
 // @grant        GM_getResourceText
@@ -13,9 +16,6 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getResourceURL
 // @grant        GM_xmlhttpRequest
-// @require
-// @require
-// @require
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // ==/UserScript==
 
