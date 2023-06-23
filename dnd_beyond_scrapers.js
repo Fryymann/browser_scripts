@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DnD Beyond Scraper
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  try to take over the world!
 // @author       ideans, kmarquez
 // @updateURL    https://raw.githubusercontent.com/Fryymann/browser_scripts/master/dnd_beyond_scrapers.js
@@ -51,6 +51,7 @@ function getData() {
         senses: scraper.senses(),
         proficiencies: scraper.proficiencies(),
         combat: scraper.combatStats(),
+        preparedSpells: scraper.preparedSpells(),
     }
     return PCData
 }
