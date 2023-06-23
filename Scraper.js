@@ -190,4 +190,43 @@ class Scraper {
         return data
     }
 
+    preparedSpells() {
+        // log function execution
+        this.log( 'preparedSpells' )
+
+        // obtain CSS class names
+        const cssClasses = this.cssClasses.preparedSpells
+
+        const containers = document.getElementsByClassName( cssClasses.containers )
+        const data = []
+
+
+        for ( let i = 0; i < containers.length; i++ ) {
+            const current = containers[ i ]
+
+            const category = {
+                name: current.getElementsByClassName( cssClasses.category )[ 0 ].innerHTML,
+                spells: [],
+            }
+
+            const spellContainers = current.getElementsByClassName( cssClasses.spellContainers )
+
+            for ( let k = 0; k < spellContainers.length; k++ ) {
+                const currentSpell = spellContainers[ k ]
+                const spell = {
+                    name: currentSpell.getElementsByClassName( cssClasses.name )[ 0 ].innerHTML,
+                    time: currentSpell.getElementsByClassName( cssClass.time )[ 0 ].innerHTML,
+                    range: currentSpell.getElementsByClassName( cssClass.range )[ 0 ].innerHTML,
+                    hitOrDc: currentSpell.getElementsByClassName( cssClass.hitOrDc )[ 0 ].innerHTML,
+                    effect: currentSpell.getElementsByClassName( cssClass.effect )[ 0 ].innerHTML,
+                    notes: currentSpell.getElementsByClassName( cssClass.notes )[ 0 ].innerHTML,
+                }
+                category.spells.push(spell)
+            }
+            data.push(category)
+        }
+        this.log()
+        return data
+    }
+
 }

@@ -32,6 +32,17 @@ const GD = {
             name: "ddbc-spell-name",
             level: "ddbc-spell-name__level",
         },
+        preparedSpells: {
+            containers: "ct-content-group",
+            category: "ct-character-sheet__inner",
+            spellContainers: "ct-spells-spell ",
+            name: "ddbc-spell-name",
+            time: "ddbc-tooltip",
+            range: "ct-spells-spell__range-origin",
+            hitOrDc: "ddbc-signed-number__number",
+            effect: "ddbc-damage__value",
+            notes: "ddbc-note-components",
+        },
         combat: {
             profBonus: {
                 container: "ct-proficiency-bonus-box",
