@@ -34,7 +34,7 @@ const GD = {
         },
         preparedSpells: {
             containers: "ct-content-group",
-            category: "ct-character-sheet__inner",
+            category: "ct-content-group__header-content",
             spellContainers: "ct-spells-spell ",
             name: "ddbc-spell-name",
             time: "ddbc-tooltip",

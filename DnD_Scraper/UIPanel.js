@@ -1,7 +1,13 @@
 
 
 class UIPanel {
+    static STYLES = {
+        fontColor: "#FFF",
+        backgroundColor: "rgba(0,0,0,0.75)",
+
+    }
     constructor( node = document.body ) {
+
         this.parentNode = node
         this.hidden = false
         this.create = this.create.bind( this )
@@ -9,9 +15,9 @@ class UIPanel {
         this.createContentBox = this.createContentBox.bind( this )
         this.append = this.append.bind( this )
         this.attachListeners = this.attachListeners.bind( this )
-        this.hide = this.hide.bind(this)
-        this.show = this.show.bind(this)
-        this.toggle = this.toggle.bind(this)
+        this.hide = this.hide.bind( this )
+        this.show = this.show.bind( this )
+        this.toggle = this.toggle.bind( this )
 
         this.panel = this.create()
         this.header = this.createHeader()
@@ -22,12 +28,14 @@ class UIPanel {
 
     hide() {
         this.hidden = true
-        this.panel.style.display = "none"
+        // this.panel.style.display = "none"
+        this.panel.style.top = "-40%"
     }
 
     show() {
         this.hidden = false
-        this.panel.style.display = "block"
+        // this.panel.style.display = "block"
+        this.panel.style.top = "0"
     }
 
     toggle() {
@@ -43,14 +51,15 @@ class UIPanel {
         panel.style.display = "none"
         panel.style.position = "fixed"
         panel.style.height = "40%"
-        panel.style.width = "80%"
+        panel.style.width = "100%"
         panel.style.backgroundColor = "rgba(0,0,0,0.75)"
-        panel.style.top = "10%"
-        panel.style.left = "10%"
-        panel.style.border = "groove #fff"
+        panel.style.top = "-50%"
+        // panel.style.left = "10%"
+        // panel.style.border = "groove #fff"
         panel.style.display = "flex"
         panel.style.flexDirection = "column"
         panel.style.justifyContent = "space-between"
+        panel.style.transition = "all 1s ease"
 
         return panel
     }
@@ -68,13 +77,13 @@ class UIPanel {
 
     createContentBox() {
         const contentBox = document.createElement( "div" )
-        contentBox.style.color = STYLES.fontColor
+        contentBox.style.color = UIPanel.STYLES.fontColor
         contentBox.style.width = "90%"
         contentBox.style.height = "80%"
         contentBox.style.display = "flex"
         contentBox.style.justifyContent = "center"
         contentBox.style.alignItems = "flex-start"
-        contentBox.style.backgroundColor = STYLES.backgroundColor
+        contentBox.style.backgroundColor = UIPanel.STYLES.backgroundColor
         contentBox.style.margin = "auto"
         contentBox.innerHTML = "BOX"
         return contentBox
